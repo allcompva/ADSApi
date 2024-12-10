@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "htcpBeWaFwqFCwmmX7h48rufWYE0ZD19KGaHGjqNCTc=",
+  "Source": "ADSWebAPI",
+  "BasePath": "_content/ADSWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
