@@ -22,6 +22,19 @@ namespace ADSWebApi.Services
                 throw ex;
             }
         }
+
+        public Tur_comercio getByEmail(string email)
+        {
+            try
+            {
+                return Tur_comercio.getByEmail(email);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public Models.Details getDetails(string cuit)
         {
             try
