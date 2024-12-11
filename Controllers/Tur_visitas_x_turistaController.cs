@@ -46,6 +46,9 @@ namespace ADSWebApi.Controllers
         [HttpPost]
         public IActionResult insert([FromBody] Formulario formData)
         {
+            /*{ {"":"El fin de semana","":"Hasta 4 Acompañantes","":"turismo","":"Movilidad_Propia","":"no","mail_turista":"allcompva@gmail.com"}'
+Request URL*/
+
             if (formData == null)
             {
                 return BadRequest("Los datos del formulario son inválidos.");

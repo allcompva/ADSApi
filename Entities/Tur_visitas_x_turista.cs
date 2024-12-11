@@ -12,8 +12,8 @@ namespace ADSWebApi.Entities
         public int id { get; set; }
         public string mail_turista { get; set; }
         public DateTime fecha { get; set; }
-        public int dias_permanencia { get; set; }
-        public int cant_acompaniantes { get; set; }
+        public string dias_permanencia { get; set; }
+        public string cant_acompaniantes { get; set; }
         public string motivo_visita { get; set; }
         public string tipo_transporte { get; set; }
         public bool primera_visita { get; set; }
@@ -24,8 +24,8 @@ namespace ADSWebApi.Entities
             id = 0;
             mail_turista = string.Empty;
             fecha = DateTime.Now;
-            dias_permanencia = 0;
-            cant_acompaniantes = 0;
+            dias_permanencia = string.Empty;
+            cant_acompaniantes = string.Empty;
             motivo_visita = string.Empty;
             tipo_transporte = string.Empty;
             primera_visita = false;
@@ -54,8 +54,8 @@ namespace ADSWebApi.Entities
                     if (!dr.IsDBNull(id)) { obj.id = dr.GetInt32(id); }
                     if (!dr.IsDBNull(mail_turista)) { obj.mail_turista = dr.GetString(mail_turista); }
                     if (!dr.IsDBNull(fecha)) { obj.fecha = dr.GetDateTime(fecha); }
-                    if (!dr.IsDBNull(dias_permanencia)) { obj.dias_permanencia = dr.GetInt32(dias_permanencia); }
-                    if (!dr.IsDBNull(cant_acompaniantes)) { obj.cant_acompaniantes = dr.GetInt32(cant_acompaniantes); }
+                    if (!dr.IsDBNull(dias_permanencia)) { obj.dias_permanencia = dr.GetString(dias_permanencia); }
+                    if (!dr.IsDBNull(cant_acompaniantes)) { obj.cant_acompaniantes = dr.GetString(cant_acompaniantes); }
                     if (!dr.IsDBNull(motivo_visita)) { obj.motivo_visita = dr.GetString(motivo_visita); }
                     if (!dr.IsDBNull(tipo_transporte)) { obj.tipo_transporte = dr.GetString(tipo_transporte); }
                     if (!dr.IsDBNull(primera_visita)) { obj.primera_visita = dr.GetBoolean(primera_visita); }
