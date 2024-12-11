@@ -142,7 +142,7 @@ namespace ADSWebApi.Entities
             }
         }
 
-        public static int? insert(Tur_visitas_x_turista obj)
+        public static void insert(Tur_visitas_x_turista obj)
         {
             try
             {
@@ -181,7 +181,7 @@ namespace ADSWebApi.Entities
                     cmd.Parameters.AddWithValue("@tipo_transporte", obj.tipo_transporte);
                     cmd.Parameters.AddWithValue("@primera_visita", obj.primera_visita);
                     cmd.Connection.Open();
-                    return Convert.ToInt32(cmd.ExecuteScalar());
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
