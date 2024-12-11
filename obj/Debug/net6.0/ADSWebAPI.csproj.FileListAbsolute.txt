@@ -38,3 +38,4 @@ D:\DN\ADSWebAPI\obj\Debug\net6.0\refint\ADSWebAPI.dll
 D:\DN\ADSWebAPI\obj\Debug\net6.0\ADSWebAPI.pdb
 D:\DN\ADSWebAPI\obj\Debug\net6.0\ADSWebAPI.genruntimeconfig.cache
 D:\DN\ADSWebAPI\obj\Debug\net6.0\ref\ADSWebAPI.dll
+D:\DN\ADSWebAPI\obj\Debug\net6.0\ADSWebAPI.sourcelink.json

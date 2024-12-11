@@ -38,3 +38,4 @@ D:\DN\ADSWebAPI\obj\Release\net6.0\ADSWebAPI.genruntimeconfig.cache
 D:\DN\ADSWebAPI\obj\Release\net6.0\ref\ADSWebAPI.dll
 D:\DN\ADSWebAPI\bin\Release\net6.0\Newtonsoft.Json.dll
 D:\DN\ADSWebAPI\bin\Release\net6.0\RestSharp.dll
+D:\DN\ADSWebAPI\obj\Release\net6.0\ADSWebAPI.sourcelink.json

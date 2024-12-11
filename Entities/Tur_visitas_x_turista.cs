@@ -10,7 +10,7 @@ namespace ADSWebApi.Entities
     public class Tur_visitas_x_turista : DALBase
     {
         public int id { get; set; }
-        public string id_turista { get; set; }
+        public string mail_turista { get; set; }
         public DateTime fecha { get; set; }
         public int dias_permanencia { get; set; }
         public int cant_acompaniantes { get; set; }
@@ -22,7 +22,7 @@ namespace ADSWebApi.Entities
         public Tur_visitas_x_turista()
         {
             id = 0;
-            id_turista = string.Empty;
+            mail_turista = string.Empty;
             fecha = DateTime.Now;
             dias_permanencia = 0;
             cant_acompaniantes = 0;
@@ -39,7 +39,7 @@ namespace ADSWebApi.Entities
             if (dr.HasRows)
             {
                 int id = dr.GetOrdinal("id");
-                int id_turista = dr.GetOrdinal("id_turista");
+                int mail_turista = dr.GetOrdinal("mail_turista");
                 int fecha = dr.GetOrdinal("fecha");
                 int dias_permanencia = dr.GetOrdinal("dias_permanencia");
                 int cant_acompaniantes = dr.GetOrdinal("cant_acompaniantes");
@@ -52,7 +52,7 @@ namespace ADSWebApi.Entities
                 {
                     obj = new Tur_visitas_x_turista();
                     if (!dr.IsDBNull(id)) { obj.id = dr.GetInt32(id); }
-                    if (!dr.IsDBNull(id_turista)) { obj.id_turista = dr.GetString(id_turista); }
+                    if (!dr.IsDBNull(mail_turista)) { obj.mail_turista = dr.GetString(mail_turista); }
                     if (!dr.IsDBNull(fecha)) { obj.fecha = dr.GetDateTime(fecha); }
                     if (!dr.IsDBNull(dias_permanencia)) { obj.dias_permanencia = dr.GetInt32(dias_permanencia); }
                     if (!dr.IsDBNull(cant_acompaniantes)) { obj.cant_acompaniantes = dr.GetInt32(cant_acompaniantes); }
@@ -98,10 +98,9 @@ namespace ADSWebApi.Entities
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText =
-                        @"SELECT *FROM tur_visitas_x_turista A
-                        INNER JOIN tur_turista B ON A.id_turista = B.id
-                        WHERE B.mail=@mail AND vigente=1";
-                    cmd.Parameters.AddWithValue("@mail", mail);
+                        @"SELECT *FROM tur_visitas_x_turista 
+                        WHERE mail_turista=@mail_turista AND vigente=1";
+                    cmd.Parameters.AddWithValue("@mail_turista", mail);
                     cmd.Connection.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     List<Tur_visitas_x_turista> lst = mapeo(dr);
@@ -126,10 +125,9 @@ namespace ADSWebApi.Entities
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText =
-                        @"SELECT A.*, B.mail FROM tur_visitas_x_turista A
-                        INNER JOIN tur_turista B ON A.id_turista = B.id
-                        WHERE B.mail=@mail";
-                    cmd.Parameters.AddWithValue("@mail", mail);
+                        @"SELECT * FROM tur_visitas_x_turista 
+                        WHERE mail_turista=@mail_turista";
+                    cmd.Parameters.AddWithValue("@mail_turista", mail);
                     cmd.Connection.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     List<Tur_visitas_x_turista> lst = mapeo(dr);
@@ -150,8 +148,7 @@ namespace ADSWebApi.Entities
             {
                 StringBuilder sql = new StringBuilder();
                 sql.AppendLine("INSERT INTO Tur_visitas_x_turista(");
-                sql.AppendLine("id");
-                sql.AppendLine(", id_turista");
+                sql.AppendLine("mail_turista");
                 sql.AppendLine(", fecha");
                 sql.AppendLine(", dias_permanencia");
                 sql.AppendLine(", cant_acompaniantes");
@@ -162,8 +159,7 @@ namespace ADSWebApi.Entities
                 sql.AppendLine(")");
                 sql.AppendLine("VALUES");
                 sql.AppendLine("(");
-                sql.AppendLine("@id");
-                sql.AppendLine(", @id_turista");
+                sql.AppendLine("@mail_turista");
                 sql.AppendLine(", @fecha");
                 sql.AppendLine(", @dias_permanencia");
                 sql.AppendLine(", @cant_acompaniantes");
@@ -177,8 +173,7 @@ namespace ADSWebApi.Entities
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = sql.ToString();
-                    cmd.Parameters.AddWithValue("@id", obj.id);
-                    cmd.Parameters.AddWithValue("@id_turista", obj.id_turista);
+                    cmd.Parameters.AddWithValue("@mail_turista", obj.mail_turista);
                     cmd.Parameters.AddWithValue("@fecha", obj.fecha);
                     cmd.Parameters.AddWithValue("@dias_permanencia", obj.dias_permanencia);
                     cmd.Parameters.AddWithValue("@cant_acompaniantes", obj.cant_acompaniantes);
@@ -206,7 +201,7 @@ namespace ADSWebApi.Entities
                 sql.AppendLine(", motivo_visita=@motivo_visita");
                 sql.AppendLine(", tipo_transporte=@tipo_transporte");
                 sql.AppendLine(", primera_visita=@primera_visita");
-                sql.AppendLine("WHERE id=@id");
+                sql.AppendLine("WHERE mail_turista=@mail_turista");
                 using (SqlConnection con = GetConnection())
                 {
                     SqlCommand cmd = con.CreateCommand();
@@ -258,7 +253,7 @@ namespace ADSWebApi.Entities
                 StringBuilder sql = new StringBuilder();
                 sql.AppendLine("UPDATE Tur_visitas_x_turista SET");
                 sql.AppendLine("vigente=@vigencia");
-                sql.AppendLine("WHERE id=@id AND id_turista=@id_turista");
+                sql.AppendLine("WHERE id=@id AND mail_turista=@mail_turista");
                 using (SqlConnection con = GetConnection())
                 {
                     SqlCommand cmd = con.CreateCommand();
@@ -266,7 +261,7 @@ namespace ADSWebApi.Entities
                     cmd.CommandText = sql.ToString();
                     cmd.Parameters.AddWithValue("@vigente", vigencia);
                     cmd.Parameters.AddWithValue("@id", idForm);
-                    cmd.Parameters.AddWithValue("@id_turista", objTurista.id);
+                    cmd.Parameters.AddWithValue("@mail_turista", objTurista.mail);
                     cmd.Connection.Open();
                     cmd.ExecuteNonQuery();
                 }

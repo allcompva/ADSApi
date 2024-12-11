@@ -52,11 +52,11 @@ namespace ADSWebApi.Controllers
             }
 
             Tur_visitas_x_turista obj = new Tur_visitas_x_turista();
-            obj.cant_acompaniantes = formData.People;
-            obj.dias_permanencia = formData.Days;
+            obj.cant_acompaniantes = formData.people;
+            obj.dias_permanencia = formData.days;
             obj.fecha = DateTime.Now;
-            obj.id_turista = formData.idTurista;
-            obj.motivo_visita = formData.Purpose;
+            obj.mail_turista = formData.mail_turista;
+            obj.motivo_visita = formData.purpose;
             if (formData.IsFirstVisit == "Si")
                 obj.primera_visita = true;
             else
