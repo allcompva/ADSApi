@@ -50,6 +50,7 @@ namespace ADSWebApi.Services
                     objD.maps = obj.georeferencia;
                     objD.titulo = obj.nombre;
                     objD.whatsapp = obj.whatsapp;
+                    objD.is_favorite = obj.is_favorite;
                 }
                 return objD;
             }

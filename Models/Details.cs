@@ -9,7 +9,7 @@
         public string whatsapp { get; set; }
         public string descripcion { get; set; }
         public string images { get; set; }
-
+        public int is_favorite { get; set; }
         public Details()
         {
             cuit = string.Empty;
@@ -19,6 +19,7 @@
             whatsapp = string.Empty;
             descripcion = string.Empty;
             images = string.Empty;  
+            is_favorite = 0;
         }
 
     }

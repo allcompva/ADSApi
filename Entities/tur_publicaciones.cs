@@ -24,8 +24,7 @@ namespace ADSWebApi.Entities
         public string img { get; set; }
         public string id_comercio { get; set; }
         public string fotos { get; set; }
-
-        public Int32 is_favorite { get; set; }
+        public int is_favorite { get; set; }
 
         public Tur_publicaciones()
         {

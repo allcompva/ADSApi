@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:/DN/ADSWebAPI/bin/Debug/net6.0/appsettings.Development.json
 D:/DN/ADSWebAPI/bin/Debug/net6.0/appsettings.json
 D:/DN/ADSWebAPI/bin/Debug/net6.0/ADSWebAPI.exe
@@ -79,3 +80,6 @@ D:/DN/ADSWebAPI/obj/Debug/net6.0/ref/ADSWebAPI.dll
 /Users/marcos/Documents/ADSApi/obj/Debug/net6.0/ADSWebAPI.pdb
 /Users/marcos/Documents/ADSApi/obj/Debug/net6.0/ADSWebAPI.genruntimeconfig.cache
 /Users/marcos/Documents/ADSApi/obj/Debug/net6.0/ref/ADSWebAPI.dll
+=======
+D:/DN/ADSWebAPI/obj/Debug/net6.0/ADSWebAPI.sourcelink.json
+>>>>>>> origin/main
