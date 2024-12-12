@@ -21,6 +21,17 @@ namespace ADSWebApi.Controllers
         //https://recreas.net/BackEnd/Tur_publicaciones/GetByCategoria?id=1
 
         [HttpGet]
+        public IActionResult getByEmail(string email)
+        {
+            var Tur_comercio = _Tur_comercioService.getByEmail(email);
+            if (Tur_comercio == null)
+            {
+                return BadRequest(new { message = "Error al obtener los datos" });
+            }
+            return Ok(Tur_comercio);
+        }
+
+        [HttpGet]
         public IActionResult getByPk(string cuit)
         {
             var Tur_comercio = _Tur_comercioService.getByPk(cuit);
@@ -182,8 +193,8 @@ namespace ADSWebApi.Controllers
                     string uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
 
                 }
-                // Obtener la ruta física de la carpeta 'assets/images'
-                string appDirectory = Directory.GetCurrentDirectory(); // Ruta física de la app
+                // Obtener la ruta fï¿½sica de la carpeta 'assets/images'
+                string appDirectory = Directory.GetCurrentDirectory(); // Ruta fï¿½sica de la app
                 string assetsPath = Path.GetFullPath(Path.Combine(appDirectory, "..", "assets", "images"));
 
                 // Crear el directorio 'assets/images' si no existe
@@ -196,14 +207,14 @@ namespace ADSWebApi.Controllers
                 {
                     if (file.Length > 0)
                     {
-                        // Generar un nombre único para cada archivo
+                        // Generar un nombre ï¿½nico para cada archivo
                         string fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
 
-                        // Validar extensión si es necesario (opcional)
+                        // Validar extensiï¿½n si es necesario (opcional)
                         var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" }; // Ejemplo
                         if (!allowedExtensions.Contains(fileExtension))
                         {
-                            return BadRequest($"El archivo {file.FileName} tiene una extensión no permitida.");
+                            return BadRequest($"El archivo {file.FileName} tiene una extensiï¿½n no permitida.");
                         }
                         string fileName = $"{obj.cuit}{"_"}{Guid.NewGuid()}{fileExtension}";
                         images.Add(fileName);
@@ -313,8 +324,8 @@ namespace ADSWebApi.Controllers
                     string uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
 
                 }
-                // Obtener la ruta física de la carpeta 'assets/images'
-                string appDirectory = Directory.GetCurrentDirectory(); // Ruta física de la app
+                // Obtener la ruta fï¿½sica de la carpeta 'assets/images'
+                string appDirectory = Directory.GetCurrentDirectory(); // Ruta fï¿½sica de la app
                 string assetsPath = Path.GetFullPath(Path.Combine(appDirectory, "..", "assets", "images"));
 
                 // Crear el directorio 'assets/images' si no existe
@@ -327,14 +338,14 @@ namespace ADSWebApi.Controllers
                 {
                     if (file.Length > 0)
                     {
-                        // Generar un nombre único para cada archivo
+                        // Generar un nombre ï¿½nico para cada archivo
                         string fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
 
-                        // Validar extensión si es necesario (opcional)
+                        // Validar extensiï¿½n si es necesario (opcional)
                         var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" }; // Ejemplo
                         if (!allowedExtensions.Contains(fileExtension))
                         {
-                            return BadRequest($"El archivo {file.FileName} tiene una extensión no permitida.");
+                            return BadRequest($"El archivo {file.FileName} tiene una extensiï¿½n no permitida.");
                         }
                         string fileName = $"{obj.cuit}{"_"}{Guid.NewGuid()}{fileExtension}";
                         images.Add(fileName);

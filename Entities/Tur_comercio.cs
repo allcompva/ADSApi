@@ -19,6 +19,7 @@ namespace ADSWebApi.Entities
         public string whatsapp { get; set; }
         public string cuit_responsable { get; set; }
         public string mail { get; set; }
+        public string password { get; set; }
         public string cel { get; set; }
         public string estado { get; set; }
         public string descripcion {  get; set; }
@@ -166,6 +167,33 @@ namespace ADSWebApi.Entities
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = sql.ToString();
                     cmd.Parameters.AddWithValue("@cuit", cuit);
+                    cmd.Connection.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    List<Tur_comercio> lst = mapeo(dr);
+                    if (lst.Count != 0)
+                        obj = lst[0];
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static Tur_comercio getByEmail(string email)
+        {
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.AppendLine("SELECT * FROM Tur_comercio WHERE mail=@email");
+                Tur_comercio obj = null;
+                using (SqlConnection con = GetConnection())
+                {
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = sql.ToString();
+                    cmd.Parameters.AddWithValue("@email", email);
                     cmd.Connection.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     List<Tur_comercio> lst = mapeo(dr);

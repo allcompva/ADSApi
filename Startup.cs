@@ -32,6 +32,8 @@ Tur_categoria_publicacionService>();
                 Tur_notificacionesService>();
             services.AddScoped<ITur_publicacionesService,
                 Tur_publicacionesService>();
+                services.AddScoped<ITur_usuarioService,
+                Tur_usuarioService>();
 
             services.AddScoped<ITur_turistaService,
                 Tur_turistaService>();
