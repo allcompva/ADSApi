@@ -65,12 +65,15 @@ Request URL*/
             else
                 obj.primera_visita = false;
             obj.tipo_transporte = formData.TravelMethod;
-
-            int? id = _Tur_visitas_x_turistaService.insert(obj);
-            if (id != null)
+            try
+            {
+            _Tur_visitas_x_turistaService.insert(obj);
                 return Ok(new { message = "Formulario recibido correctamente" });
-            else
+            }
+            catch (Exception ex)
+            {
                 return BadRequest("Los datos del formulario son inválidos.");
+            }
         }
     }
 }

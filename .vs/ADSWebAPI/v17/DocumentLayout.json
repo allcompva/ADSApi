@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\DN\\ADSWebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|d:\\dn\\adswebapi\\entities\\tur_visitas_x_turista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|solutionrelative:entities\\tur_visitas_x_turista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|d:\\dn\\adswebapi\\controllers\\tur_visitas_x_turistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|solutionrelative:controllers\\tur_visitas_x_turistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|d:\\dn\\adswebapi\\services\\tur_visitas_x_turistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|solutionrelative:services\\tur_visitas_x_turistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|d:\\dn\\adswebapi\\controllers\\tur_visitas_x_turistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|solutionrelative:controllers\\tur_visitas_x_turistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|d:\\dn\\adswebapi\\entities\\tur_visitas_x_turista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|solutionrelative:entities\\tur_visitas_x_turista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F7723A8-E459-4A94-B849-C4529529905D}|ADSWebAPI.csproj|d:\\dn\\adswebapi\\models\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Document",
@@ -200,26 +200,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "solicitudes.cs",
-              "DocumentMoniker": "D:\\DN\\ADSWebAPI\\Models\\solicitudes.cs",
-              "RelativeDocumentMoniker": "Models\\solicitudes.cs",
-              "ToolTip": "D:\\DN\\ADSWebAPI\\Models\\solicitudes.cs",
-              "RelativeToolTip": "Models\\solicitudes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:56:35.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Tur_visitas_x_turistaService.cs",
               "DocumentMoniker": "D:\\DN\\ADSWebAPI\\Services\\Tur_visitas_x_turistaService.cs",
               "RelativeDocumentMoniker": "Services\\Tur_visitas_x_turistaService.cs",
               "ToolTip": "D:\\DN\\ADSWebAPI\\Services\\Tur_visitas_x_turistaService.cs",
               "RelativeToolTip": "Services\\Tur_visitas_x_turistaService.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAgwEwAAAAQAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAvwEgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T21:50:58.472Z",
               "EditorCaption": ""
@@ -227,6 +214,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Tur_visitas_x_turistaController.cs",
+              "DocumentMoniker": "D:\\DN\\ADSWebAPI\\Controllers\\Tur_visitas_x_turistaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Tur_visitas_x_turistaController.cs",
+              "ToolTip": "D:\\DN\\ADSWebAPI\\Controllers\\Tur_visitas_x_turistaController.cs",
+              "RelativeToolTip": "Controllers\\Tur_visitas_x_turistaController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAADgv0oAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T03:46:14.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Tur_visitas_x_turista.cs",
               "DocumentMoniker": "D:\\DN\\ADSWebAPI\\Entities\\Tur_visitas_x_turista.cs",
               "RelativeDocumentMoniker": "Entities\\Tur_visitas_x_turista.cs",
@@ -239,15 +239,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Tur_visitas_x_turistaController.cs",
-              "DocumentMoniker": "D:\\DN\\ADSWebAPI\\Controllers\\Tur_visitas_x_turistaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Tur_visitas_x_turistaController.cs",
-              "ToolTip": "D:\\DN\\ADSWebAPI\\Controllers\\Tur_visitas_x_turistaController.cs",
-              "RelativeToolTip": "Controllers\\Tur_visitas_x_turistaController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAAAEQAAAAMAAAA",
+              "DocumentIndex": 6,
+              "Title": "solicitudes.cs",
+              "DocumentMoniker": "D:\\DN\\ADSWebAPI\\Models\\solicitudes.cs",
+              "RelativeDocumentMoniker": "Models\\solicitudes.cs",
+              "ToolTip": "D:\\DN\\ADSWebAPI\\Models\\solicitudes.cs",
+              "RelativeToolTip": "Models\\solicitudes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T03:46:14.529Z",
+              "WhenOpened": "2024-12-11T16:56:35.186Z",
               "EditorCaption": ""
             },
             {

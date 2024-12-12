@@ -66,11 +66,11 @@ namespace ADSWebApi.Services
                 throw ex;
             }
         }
-        public int? insert(Tur_visitas_x_turista obj)
+        public void insert(Tur_visitas_x_turista obj)
         {
             try
             {
-                return Tur_visitas_x_turista.insert(obj);
+                Tur_visitas_x_turista.insert(obj);
             }
             catch (Exception ex)
             {

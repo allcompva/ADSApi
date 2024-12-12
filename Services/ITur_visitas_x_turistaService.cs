@@ -9,7 +9,7 @@ namespace ADSWebApi.Services
     {
         public List<Tur_visitas_x_turista> read();
         public Tur_visitas_x_turista getByPk(string mail);
-        public int? insert(Tur_visitas_x_turista obj);
+        public void insert(Tur_visitas_x_turista obj);
         public void delete(int id);
         public void setVigenciaMasiva(bool vigencia);
         public bool isFormComplete(string mail);
