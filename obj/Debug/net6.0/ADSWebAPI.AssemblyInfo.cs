@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADSWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51e005d1636659712bfd6208e28d65621d93ba92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b46b023ffa9d0495fed2258b0ff33066c1558865")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADSWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADSWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
